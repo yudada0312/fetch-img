@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "env": {
+    "MINIO_END_POINT": "minio.ha7777.net",
+    "MINIO_PORT": "443",
+    "MINIO_USE_SSL": "true",
+    "MINIO_ACCESS_KEY": "minioRD9M56rEYAtZ",
+    "MINIO_SECRET_KEY": "07pl27pDzeBtxSD1"
+  },
+  "builds": [
+    { "src": "test_img/index.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/test_img/index.js" },
+    { "src": "/form", "dest": "/@utils/form.js" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "/ccking/atm", "dest": "/ccking/atm.html" },
+    { "src": "/ccking/(.+)", "dest": "/ccking/index.js" },
+    { "src": "/mycash/atm", "dest": "/mycash/atm.html" },
+    { "src": "/mycash/cvs", "dest": "/mycash/cvs.html" },
+    { "src": "/mycash/(.+)", "dest": "/mycash/index.js" },
+    { "src": "/wecash/atm", "dest": "/wecash/atm.html" },
+    { "src": "/wecash/cvs", "dest": "/wecash/cvs.html" },
+    { "src": "/wecash/(.+)", "dest": "/wecash/index.js" },
+    { "src": "/s88pay/atm", "dest": "/s88pay/atm.html" },
+    { "src": "/s88pay/cvs", "dest": "/s88pay/cvs.html" },
+    { "src": "/s88pay/credit", "dest": "/s88pay/credit.html" },
+    { "src": "/s88pay/(.+)", "dest": "/s88pay/index.js" },
+    { "src": "/saifu/atm", "dest": "/saifu/atm.html" },
+    { "src": "/saifu/cvs", "dest": "/saifu/cvs.html" },
+    { "src": "/saifu/(.+)", "dest": "/saifu/index.js" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "public/*", "use": "@now/static" },
+    { "src": "@utils/form.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } },
+    { "src": "test_img/index.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/test_img/index.js" },
+    { "src": "/form", "dest": "/@utils/form.js" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/public/robots.txt" }
+  ]
+}
