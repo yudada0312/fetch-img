@@ -16,7 +16,7 @@
     "chrome-aws-lambda": "^2.0.2",
     "date-fns": "^2.4.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "helmet": "^3.21.1",
     "koa": "^2.8.2",
     "koa-bodyparser": "^4.2.1",
